@@ -38,6 +38,5 @@ while True:
     screen.fill(WHITE)
 
     # 直線
-    pygame.draw.line(screen, BLACK, (100, 100), (400, 400), 10)
     
     pygame.display.update()

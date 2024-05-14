@@ -40,5 +40,7 @@ while True:
     # 以下請寫出文字創建的函式
 
         
+
+        
     # 遊戲的畫面更新
     pygame.display.update()
