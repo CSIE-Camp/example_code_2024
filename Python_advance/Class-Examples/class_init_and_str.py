@@ -1,5 +1,5 @@
 class Book:
-    def __init__(self, lan, ti):  # 把兩個值書進來
+    def __init__(self, lan, ti):  # 把兩個值輸進來
         self.language = lan  # 把第一個值設定給 language
         self.title = ti  # 把第二個值設定給 title
         self.ti_lan = ti + f" ({lan})"  # 把 title 和 language 組合起來
