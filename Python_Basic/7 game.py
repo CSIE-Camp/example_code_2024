@@ -8,7 +8,7 @@ height = int(input())  # height of the grid
 width = int(input())  # width of the grid
 
 # game loop
-a = 0
+
 while True:
     list = []
     for i in range(height):
@@ -21,7 +21,15 @@ while True:
 
     Weight = [0, 0, 0, 0] # UP, RIGHT, DOWN, LEFT
 
-    #todo
+    '''
+    Hint:
+    1. 當你覺得往上走比較好時，Weight[0] += 1(或更大的值)(其他方向以此類推)
+    2. 當你覺得往上走比較不好時，Weight[0] -= 1(或更小的值)(其他方向以此類推)
+    3. 盡可能想更多的情況，以達到更好的結果
+    4. 加油！這堂課即將進入尾聲，希望你能學到東西！
+    '''
+
+    # TODO
 
     
     # UP | RIGHT | DOWN | LEFT
