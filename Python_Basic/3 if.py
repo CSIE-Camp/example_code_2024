@@ -1,4 +1,4 @@
 year = int(input("Enter a year: "))
 
-#todo
+# TODO
 #判斷是否為閏年
