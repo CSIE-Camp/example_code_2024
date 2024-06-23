@@ -17,23 +17,11 @@ for i in range(1, 26):
         else:
             now_j += 1
     elif dir == 1:
-        if now_i == 4 or list[now_i+1][now_j] != 0:
-            dir = 2
-            now_j -= 1
-        else:
-            now_i += 1
+        # TODO
     elif dir == 2:
-        if now_j == 0 or list[now_i][now_j-1] != 0:
-            dir = 3
-            now_i -= 1
-        else:
-            now_j -= 1
+        # TODO
     elif dir == 3:
-        if now_i == 0 or list[now_i-1][now_j] != 0:
-            dir = 0
-            now_j += 1
-        else:
-            now_i -= 1
+        # TODO
 
 for i in range(5):
     for j in range(5):
