@@ -302,9 +302,9 @@ def game_menu(screen):
 
 def battle_group_set():
     import shutil
-    teamA = input("input teamA program name: ")
+    teamW = input("input teamW program name: ")
     teamB = input("input teamB program name: ")
-    shutil.copy(teamA, "teamA.py")
+    shutil.copy(teamW, "teamW.py")
     shutil.copy(teamB, "teamB.py")
     return
 
@@ -424,7 +424,7 @@ def main():
             timer = 30
 
 battle_group_set()
-from teamA import calculate_weight as calculate_weight_A
+from teamW import calculate_weight as calculate_weight_A
 from teamB import calculate_weight as calculate_weight_B
 
 if __name__ == "__main__":
