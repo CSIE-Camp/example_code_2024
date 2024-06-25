@@ -6,12 +6,12 @@ def print_board(board):
         print(" ".join(row), file=sys.stderr, flush=True)
 
 def get_actual_board(board):
-    # Remove rows that are completely 'x'
+    # 移除 'x' row
     actual_board = [row for row in board if any(cell != 'x' for cell in row)]
     if not actual_board:
         return []
     
-    # Find the first and last columns that are not entirely 'x'
+    # 確定最左欄
     first_col = len(actual_board[0])
     last_col = 0
     for row in actual_board:
@@ -20,7 +20,7 @@ def get_actual_board(board):
                 first_col = min(first_col, j)
                 last_col = max(last_col, j)
     
-    # Trim the columns that are completely 'x'
+    # 去掉全 x 欄
     actual_board = [row[first_col:last_col+1] for row in actual_board]
     return actual_board
 
