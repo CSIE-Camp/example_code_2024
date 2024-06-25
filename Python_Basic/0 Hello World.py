@@ -1,3 +1,0 @@
-# TODO
-#print "Hello World"
-
