@@ -1,6 +1,29 @@
 import sys
 import math
 
+def print_board(board):
+    for row in board:
+        print(" ".join(row), file=sys.stderr, flush=True)
+
+def get_actual_board(board):
+    # Remove rows that are completely 'x'
+    actual_board = [row for row in board if any(cell != 'x' for cell in row)]
+    if not actual_board:
+        return []
+    
+    # Find the first and last columns that are not entirely 'x'
+    first_col = len(actual_board[0])
+    last_col = 0
+    for row in actual_board:
+        for j, cell in enumerate(row):
+            if cell != 'x':
+                first_col = min(first_col, j)
+                last_col = max(last_col, j)
+    
+    # Trim the columns that are completely 'x'
+    actual_board = [row[first_col:last_col+1] for row in actual_board]
+    return actual_board
+
 # Try to survive by not falling off
 
 my_id = int(input())  # Your id, 0 or 1
@@ -17,7 +40,7 @@ while True:
 
     # Write an action using print
     # To debug: print("Debug messages...", file=sys.stderr, flush=True)    
-    # print(list, file=sys.stderr, flush=True)
+    # print_board(get_actual_board(list))
 
     Weight = [0, 0, 0, 0] # UP, RIGHT, DOWN, LEFT
 
