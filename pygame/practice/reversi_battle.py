@@ -253,10 +253,10 @@ def display_winner(screen, winner, count_x, count_o):
     screen.blit(text_o, text_o_rect)
     
     # Click blank to continue
-    font_tip = pygame.font.Font(None, 48)
-    tip_text = font_tip.render("Click blank to continue", True, HINT_COLOR)
-    tip_rect = tip_text.get_rect(midtop=(text_rect.centerx, text_o_rect.bottom + 50))
-    screen.blit(tip_text, tip_rect)
+    # font_tip = pygame.font.Font(None, 48)
+    # tip_text = font_tip.render("Click blank to continue", True, HINT_COLOR)
+    # tip_rect = tip_text.get_rect(midtop=(text_rect.centerx, text_o_rect.bottom + 50))
+    # screen.blit(tip_text, tip_rect)
 
     pygame.display.update()
 
@@ -412,8 +412,6 @@ def main():
                     if event.type == pygame.QUIT:  # 點擊視窗關閉按鈕
                         pygame.quit()
                         sys.exit()
-                    elif event.type == pygame.MOUSEBUTTONDOWN:  # 按下滑鼠按鈕
-                        waiting = False
             pygame.quit()
             sys.exit()
 
