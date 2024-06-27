@@ -10,12 +10,8 @@ def calculate_weight(board, row, col, player, step):
         weight += 100
 
     # 權重減少：C位
-    if (row, col) in [(0, 1), (1, 0), (6, 0), (7, 1), (7, 6), (6, 7), (1, 7), (0, 6)]:
-        weight -= 10
 
     # 權重減少：星位
-    if (row, col) in [(1, 1), (6, 1), (6, 6), (1, 6)]:
-        weight -= 50
     
     # 權重增加：邊界格子
     
