@@ -321,7 +321,7 @@ def main():
     board = initialize_board()
     
     player_turn = 'X'  # 初始化順序
-    timer = 30  # 初始化計時器
+    timer = 20  # 初始化計時器
     clock = pygame.time.Clock()  # pygame 時鐘物件
     
     # 投降按鈕
@@ -355,7 +355,7 @@ def main():
                         winner = 'X'
                 elif skip_button.collidepoint(mouseX, mouseY):  # 點擊Skip按鈕
                     player_turn = 'O' if player_turn == 'X' else 'X'
-                    timer = 30
+                    timer = 20
                 # 下棋位置的合法性
                 elif is_valid_move(board, clicked_row, clicked_col, player_turn):
                     step += 1
@@ -363,20 +363,20 @@ def main():
                     make_move(board, clicked_row, clicked_col, player_turn)
                     last_move = (clicked_row, clicked_col)  # 記錄下的位置
                     player_turn = 'O' if player_turn == 'X' else 'X'
-                    timer = 30
+                    timer = 20
 
         if (game_mode == 'player_computer' and player_turn == 'O') or game_mode == 'computer_computer':
             step += 1
             ai_move = ai_design(board, player_turn, step)
             if ai_move is None:
                 player_turn = 'X' if player_turn == 'O' else 'O'
-                timer = 30
+                timer = 20
             else:
                 # 移動棋子
                 make_move(board, ai_move[0], ai_move[1], player_turn)
                 last_move = (ai_move[0], ai_move[1])
                 player_turn = 'X' if player_turn == 'O' else 'O'
-                timer = 30
+                timer = 20
 
         possible_moves_O = []  # 白棋合法的位置
         for row in range(ROWS):
@@ -419,7 +419,7 @@ def main():
         timer -= dt
         if timer <= 0:
             player_turn = 'O' if player_turn == 'X' else 'X'
-            timer = 30
+            timer = 20
 
 battle_group_set()
 from teamW import calculate_weight as calculate_weight_A
